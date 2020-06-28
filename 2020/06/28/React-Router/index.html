@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>React Router - Yang博客</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="安装
+react-router 核心组件
+
+react-router-dom 应用于浏览器端的路由库（单独使用包含了react-router的核心部分）
+
+react-router-native 应,"> 
+    <meta name="author" content="Advanced_W"> 
+    <link rel="alternative" href="atom.xml" title="Yang博客" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.ico"> 
+    
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">Yang博客</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://yoursite.com"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">React Router</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">React Router</h1>
+        <div class="stuff">
+            <span>六月 28, 2020</span>
+            
+
+        </div>
+        <div class="content markdown">
+            <h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><ul>
+<li><p>react-router 核心组件</p>
+</li>
+<li><p>react-router-dom 应用于浏览器端的路由库（单独使用包含了react-router的核心部分）</p>
+</li>
+<li><p>react-router-native 应用于native端的路由</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yarn add react-router-dom</span><br><span class="line"># 或者，不使用 yarn</span><br><span class="line">npm install react-router-dom</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<h4 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h4><p>现在的React Router版本中已不需要路由配置，现在一切皆组件</p>
+<p>ReactRouter中提供的三大组件：</p>
+<ul>
+<li>Router是所有路由组件共用的底层接口组件，它是路由规则制定的最外层的容器。</li>
+<li>Route路由规则匹配，并显示当前的规则对应的组件。</li>
+<li>Link路由跳转的组件</li>
+</ul>
+<h4 id="三大组件使用关系"><a href="#三大组件使用关系" class="headerlink" title="三大组件使用关系"></a>三大组件使用关系</h4><p><img src="https://upload-images.jianshu.io/upload_images/4393631-42e115b23670916b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp" alt=""></p>
+<p>如果说我们的应用程序是一座小城的话，那么Route就是一座座带有门牌号的建筑物，而Link就代表了到某个建筑</p>
+<p>物的路线。有了路线和目的地，那么就缺一位老司机了，没错Router就是这个老司机。</p>
+<h4 id="Router组件"><a href="#Router组件" class="headerlink" title="Router组件"></a>Router组件</h4><h4 id="BrowserRouter组件"><a href="#BrowserRouter组件" class="headerlink" title="BrowserRouter组件"></a><a href="https://malun666.github.io/aicoder_vip_doc/#/pages/Vip3_react_router?id=browserrouter组件" target="_blank" rel="noopener">BrowserRouter组件</a></h4><p>BrowserRouter 主要使用在浏览器中（web应用），它利用HTML5 的history API来同步URL和UI的变化。当我们</p>
+<p>点击了程序中的一个链接之后,<code>BrowserRouter</code>就会找出与这个<code>URL</code>匹配的<code>Route</code>，并将他们对应的组件渲染出</p>
+<p>来。 <code>BrowserRouter</code>是用来管理我们的组件的，要被放在最顶级的位置，而我们的应用程序的组件就</p>
+<p>作为它的一个子组件而存在</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import * as React from &#39;react&#39;;</span><br><span class="line">import * as ReactDOM from &#39;react-dom&#39;;</span><br><span class="line">import &#123; BrowserRouter &#125; from &#39;react-router-dom&#39;;</span><br><span class="line"></span><br><span class="line">ReactDOM.render(</span><br><span class="line">    &lt;BrowserRouter&gt;</span><br><span class="line">        &lt;App&#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;BrowserRouter&gt;,</span><br><span class="line">    document.body);</span><br></pre></td></tr></table></figure>
+
+<p>BrowserRouter  提供了四个属性</p>
+<ul>
+<li>basename：字符串类型，路由器的默认根路径</li>
+<li>forceRefresh：布尔类型，在导航的过程中整个页面是否刷新</li>
+<li>getUserConfirmation：函数类型，当导航需要确认时执行的函数</li>
+<li>keyLength：数字类型 location.key  的长度。默认是 6</li>
+</ul>
+<hr>
+<h4 id="HashRouter"><a href="#HashRouter" class="headerlink" title="HashRouter"></a><a href="https://malun666.github.io/aicoder_vip_doc/#/pages/Vip3_react_router?id=hashrouter" target="_blank" rel="noopener">HashRouter</a></h4><p><code>HashRouter</code> 使用 URL 的 hash (例如：<code>window.location.hash</code>) 来保持 UI 和 URL 的同步</p>
+<p>注意：使用 hash 的方式记录导航历史不支持 <code>location.key</code> 和<code>location.state</code>。在以前的版本中，我们为这种行为提供了 shim，但是仍有一些问题我们无法解。任何依赖此行为的代码或插件都将无法正常使用。由于该技术仅用于支持传统的浏览器，因此在用于浏览器时可以使用 <code>&lt;BrowserHistory&gt;</code> 代替</p>
+<p>跟<code>BrowserRouter</code>类似，它也有：<code>basename</code>、<code>getUserConfirmation</code>、<code>children</code>属性，而且是一样的</p>
+<hr>
+<h4 id="Link组件"><a href="#Link组件" class="headerlink" title="Link组件"></a><a href="https://malun666.github.io/aicoder_vip_doc/#/pages/Vip3_react_router?id=link组件" target="_blank" rel="noopener">Link组件</a></h4><p>Link就像是一个个的路牌，为我们指明组件的位置。Link使用声明式的方式为应用程序提供导航功能，定义的Link</p>
+<p>最终会被渲染成一个a标签。Link使用to这个属性来指明目标组件的路径，可以直接使用一个字符串，也可以传入</p>
+<p>一个对象</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Link &#125; from &#39;react-router-dom&#39;</span><br><span class="line">&#x2F;&#x2F; 字符串参数</span><br><span class="line">&lt;Link to&#x3D;&quot;&#x2F;query&quot;&gt;查询&lt;&#x2F;Link&gt;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 对象参数</span><br><span class="line">&lt;Link to&#x3D;&#123;&#123;</span><br><span class="line">  pathname: &#39;&#x2F;query&#39;,</span><br><span class="line">  search: &#39;?key&#x3D;name&#39;,</span><br><span class="line">  hash: &#39;#hash&#39;,</span><br><span class="line">  state: &#123; fromDashboard: true &#125;</span><br><span class="line">&#125;&#125;&gt;查询&lt;&#x2F;Link&gt;</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://malun666.github.io/aicoder_vip_doc/#/pages/Vip3_react_router?id=属性：-to" target="_blank" rel="noopener">属性： to</a></p>
+<p>需要跳转到的路径(pathname)或地址（location）</p>
+<p><a href="https://malun666.github.io/aicoder_vip_doc/#/pages/Vip3_react_router?id=属性：replace-bool" target="_blank" rel="noopener">属性：replace: bool</a></p>
+<p>当设置为 <code>true</code> 时，点击链接后将使用新地址替换掉访问历史记录里面的原地址</p>
+<p>当设置为 <code>false</code> 时，点击链接后将在原有访问历史记录的基础上添加一个新的纪录</p>
+<p>默认为 <code>false</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;Link to&#x3D;&quot;&#x2F;courses&quot; replace &#x2F;&gt;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="NavLink组件"><a href="#NavLink组件" class="headerlink" title="NavLink组件"></a><a href="https://malun666.github.io/aicoder_vip_doc/#/pages/Vip3_react_router?id=navlink组件" target="_blank" rel="noopener">NavLink组件</a></h4><p>NavLink是一个特殊版本的Link，可以使用activeClassName来设置Link被选中时被附加的class，使用activeStyle来配置被选中时应用的样式。此外，还有一个exact属性,此属性要求location完全匹配才会附加class和style。这里说的匹配是指地址栏中的URl和这个Link的to指定的location相匹配。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 选中后被添加class selected</span><br><span class="line"><span class="tag">&lt;<span class="name">NavLink</span> <span class="attr">to</span>=<span class="string">&#123;</span>'/'&#125; <span class="attr">exact</span> <span class="attr">activeClassName</span>=<span class="string">'selected'</span>&gt;</span>Home<span class="tag">&lt;/<span class="name">NavLink</span>&gt;</span></span><br><span class="line">// 选中后被附加样式 color:red</span><br><span class="line"><span class="tag">&lt;<span class="name">NavLink</span> <span class="attr">to</span>=<span class="string">&#123;</span>'/<span class="attr">gallery</span>'&#125; <span class="attr">activeStyle</span>=<span class="string">&#123;&#123;color:red&#125;&#125;</span>&gt;</span>Gallery<span class="tag">&lt;/<span class="name">NavLink</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">activeClassName&#96;默认值为 &#96;active</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p><a href="https://malun666.github.io/aicoder_vip_doc/#/pages/Vip3_react_router?id=属性" target="_blank" rel="noopener">属性</a></p>
+<ul>
+<li>to 可以是字符串或者对象，同Link组件</li>
+<li>exact 布尔类型，完全匹配时才会被附件class和style</li>
+<li>activeStyle Object类型</li>
+<li>activeClassName 字符串类型</li>
+<li>strict: bool类型，当值为 <code>true</code> 时，在确定位置是否与当前 URL 匹配时，将考虑位置 <code>pathname</code> 后的斜线</li>
+</ul>
+<hr>
+<h4 id="Route组件"><a href="#Route组件" class="headerlink" title="Route组件"></a><a href="https://malun666.github.io/aicoder_vip_doc/#/pages/Vip3_react_router?id=route组件" target="_blank" rel="noopener">Route组件</a></h4><p>Route应该是react-route中最重要的组件了，它的作用是当location与Route的path匹配时渲染Route中的Component。如果有多个Route匹配，那么这些Route的Component都会被渲染。</p>
+<p>与Link类似，Route也有一个exact属性，作用也是要求location与Route的path<strong>绝对匹配</strong>。</p>
+<hr>
+<h4 id="Route的三种渲染方式"><a href="#Route的三种渲染方式" class="headerlink" title="Route的三种渲染方式"></a>Route的三种渲染方式</h4><ul>
+<li>component：最常用</li>
+<li>render：render的类型是function，Route会渲染这个function的返回值</li>
+</ul>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;Route path=<span class="string">"/home"</span> render=&#123;() =&gt; &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'额外的逻辑'</span>);</span><br><span class="line">    <span class="keyword">return</span> (<span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>Home<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>);</span><br><span class="line">    &#125;/&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>children：是一个function，会被传入一个 match 参数来告诉你这个Route的path 和location是否匹配上</li>
+</ul>
+<hr>
+<h4 id="Redirect组件"><a href="#Redirect组件" class="headerlink" title="Redirect组件"></a><a href="https://malun666.github.io/aicoder_vip_doc/#/pages/Vip3_react_router?id=redirect组件" target="_blank" rel="noopener">Redirect组件</a></h4><p>当这个组件被渲染是，location会被重写为Redirect的to指定的新location。它的一个用途是登录重定向，比如在用户点了登录并验证通过之后，将页面跳转到个人主页。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Redirect</span> <span class="attr">to</span>=<span class="string">"/new"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="Switch组件"><a href="#Switch组件" class="headerlink" title="Switch组件"></a><a href="https://malun666.github.io/aicoder_vip_doc/#/pages/Vip3_react_router?id=switch组件" target="_blank" rel="noopener">Switch组件</a></h4><p>渲染匹配地址(location)的第一个 <code>&lt;Route&gt;</code>或者<code>&lt;Redirect&gt;</code></p>
+<p><strong>这与只使用一堆<Route>有什么不同？</strong></p>
+<p><code>&lt;Switch&gt;</code>的独特之处是独它<em>仅仅</em>渲染一个路由。相反地，<em>每一个包含</em>匹配地址(location)的<code>&lt;Route&gt;</code>都会被渲染。思考下面的代码：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Route</span> <span class="attr">path</span>=<span class="string">"/about"</span> <span class="attr">component</span>=<span class="string">&#123;About&#125;/</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">Route</span> <span class="attr">path</span>=<span class="string">"/:user"</span> <span class="attr">component</span>=<span class="string">&#123;User&#125;/</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">Route</span> <span class="attr">component</span>=<span class="string">&#123;NoMatch&#125;/</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>如果现在的URL是 <code>/about</code> ，那么 <code>&lt;About&gt;</code>, <code>&lt;User&gt;</code>, 还有 <code>&lt;NoMatch&gt;</code> 都会被渲染，因为它们都与路径(path)匹配。这种设计，允许我们以多种方式将多个 <code>&lt;Route&gt;</code> 组合到我们的应用程序中，例如侧栏(sidebars)，面包屑(breadcrumbs)，bootstrap tabs等等。 然而，偶尔我们只想选择一个<code>&lt;Route&gt;</code> 来渲染。如果我们现在处于 <code>/about</code>，我们也不希望匹配 <code>/:user</code> （或者显示我们的 “404” 页面 ）。以下是使用 <code>Switch</code> 的方法来实现：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Switch, Route &#125; from 'react-router'</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">Switch</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">Route</span> <span class="attr">exact</span> <span class="attr">path</span>=<span class="string">"/"</span> <span class="attr">component</span>=<span class="string">&#123;Home&#125;/</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">Route</span> <span class="attr">path</span>=<span class="string">"/about"</span> <span class="attr">component</span>=<span class="string">&#123;About&#125;/</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">Route</span> <span class="attr">path</span>=<span class="string">"/:user"</span> <span class="attr">component</span>=<span class="string">&#123;User&#125;/</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">Route</span> <span class="attr">component</span>=<span class="string">&#123;NoMatch&#125;/</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Switch</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>现在，如果我们处于 <code>/about</code>, <code>&lt;Switch&gt;</code> 将开始寻找匹配的 <code>&lt;Route&gt;</code>。 <code>&lt;Route path=&quot;/about&quot;/&gt;</code> 将被匹配， <code>&lt;Switch&gt;</code> 将停止寻找匹配并渲染<code>&lt;About&gt;</code>。 同样，如果我们处于 <code>/michael</code> ， <code>&lt;User&gt;</code> 将被渲染。</p>
+<p>这对于过渡动画也是起作用的，因为匹配的 <code>&lt;Route&gt;</code> 在与前一个相同的位置被渲染。</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;Fade&gt;</span><br><span class="line">  &lt;<span class="keyword">Switch</span>&gt;</span><br><span class="line">    &#123;<span class="comment">/* there will only ever be one child here */</span>&#125;</span><br><span class="line">    &#123;<span class="comment">/* 这里只会有一个子节点 */</span>&#125;</span><br><span class="line">    &lt;Route/&gt;</span><br><span class="line">    &lt;Route/&gt;</span><br><span class="line">  &lt;/<span class="keyword">Switch</span>&gt;</span><br><span class="line">&lt;/Fade&gt;</span><br><span class="line"></span><br><span class="line">&lt;Fade&gt;</span><br><span class="line">  &lt;Route/&gt;</span><br><span class="line">  &lt;Route/&gt;</span><br><span class="line">  &#123;<span class="comment">/* there will always be two children here,</span></span><br><span class="line"><span class="comment">      one might render null though, making transitions</span></span><br><span class="line"><span class="comment">      a bit more cumbersome to work out */</span>&#125;</span><br><span class="line">   &#123;<span class="comment">/* 这里总是有两个子节点,</span></span><br><span class="line"><span class="comment">      一个可能会渲染为null, 使计算过渡增加了一点麻烦 */</span>&#125;    </span><br><span class="line">&lt;/Fade&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title='0' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                        
+                            <li title='1' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+		data-enable='false'
+        data-ae='false'
+        data-ci=''
+        data-cs=''
+        data-r=''
+        data-o=''
+        data-a=''
+        data-d='false'
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>
