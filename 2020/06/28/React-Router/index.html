@@ -85,12 +85,8 @@ react-router-native 应,">
 <li>Link路由跳转的组件</li>
 </ul>
 <h4 id="三大组件使用关系"><a href="#三大组件使用关系" class="headerlink" title="三大组件使用关系"></a>三大组件使用关系</h4><p><img src="https://upload-images.jianshu.io/upload_images/4393631-42e115b23670916b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp" alt=""></p>
-<p>如果说我们的应用程序是一座小城的话，那么Route就是一座座带有门牌号的建筑物，而Link就代表了到某个建筑</p>
-<p>物的路线。有了路线和目的地，那么就缺一位老司机了，没错Router就是这个老司机。</p>
-<h4 id="Router组件"><a href="#Router组件" class="headerlink" title="Router组件"></a>Router组件</h4><h4 id="BrowserRouter组件"><a href="#BrowserRouter组件" class="headerlink" title="BrowserRouter组件"></a><a href="https://malun666.github.io/aicoder_vip_doc/#/pages/Vip3_react_router?id=browserrouter组件" target="_blank" rel="noopener">BrowserRouter组件</a></h4><p>BrowserRouter 主要使用在浏览器中（web应用），它利用HTML5 的history API来同步URL和UI的变化。当我们</p>
-<p>点击了程序中的一个链接之后,<code>BrowserRouter</code>就会找出与这个<code>URL</code>匹配的<code>Route</code>，并将他们对应的组件渲染出</p>
-<p>来。 <code>BrowserRouter</code>是用来管理我们的组件的，要被放在最顶级的位置，而我们的应用程序的组件就</p>
-<p>作为它的一个子组件而存在</p>
+<p>如果说我们的应用程序是一座小城的话，那么Route就是一座座带有门牌号的建筑物，而Link就代表了到某个建筑物的路线。有了路线和目的地，那么就缺一位老司机了，没错Router就是这个老司机。</p>
+<h4 id="Router组件"><a href="#Router组件" class="headerlink" title="Router组件"></a>Router组件</h4><h4 id="BrowserRouter组件"><a href="#BrowserRouter组件" class="headerlink" title="BrowserRouter组件"></a><a href="https://malun666.github.io/aicoder_vip_doc/#/pages/Vip3_react_router?id=browserrouter组件" target="_blank" rel="noopener">BrowserRouter组件</a></h4><p>BrowserRouter 主要使用在浏览器中（web应用），它利用HTML5 的history API来同步URL和UI的变化。当我们点击了程序中的一个链接之后,<code>BrowserRouter</code>就会找出与这个<code>URL</code>匹配的<code>Route</code>，并将他们对应的组件渲染出来。 <code>BrowserRouter</code>是用来管理我们的组件的，要被放在最顶级的位置，而我们的应用程序的组件就作为它的一个子组件而存在</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import * as React from &#39;react&#39;;</span><br><span class="line">import * as ReactDOM from &#39;react-dom&#39;;</span><br><span class="line">import &#123; BrowserRouter &#125; from &#39;react-router-dom&#39;;</span><br><span class="line"></span><br><span class="line">ReactDOM.render(</span><br><span class="line">    &lt;BrowserRouter&gt;</span><br><span class="line">        &lt;App&#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;BrowserRouter&gt;,</span><br><span class="line">    document.body);</span><br></pre></td></tr></table></figure>
 
 <p>BrowserRouter  提供了四个属性</p>
@@ -105,9 +101,7 @@ react-router-native 应,">
 <p>注意：使用 hash 的方式记录导航历史不支持 <code>location.key</code> 和<code>location.state</code>。在以前的版本中，我们为这种行为提供了 shim，但是仍有一些问题我们无法解。任何依赖此行为的代码或插件都将无法正常使用。由于该技术仅用于支持传统的浏览器，因此在用于浏览器时可以使用 <code>&lt;BrowserHistory&gt;</code> 代替</p>
 <p>跟<code>BrowserRouter</code>类似，它也有：<code>basename</code>、<code>getUserConfirmation</code>、<code>children</code>属性，而且是一样的</p>
 <hr>
-<h4 id="Link组件"><a href="#Link组件" class="headerlink" title="Link组件"></a><a href="https://malun666.github.io/aicoder_vip_doc/#/pages/Vip3_react_router?id=link组件" target="_blank" rel="noopener">Link组件</a></h4><p>Link就像是一个个的路牌，为我们指明组件的位置。Link使用声明式的方式为应用程序提供导航功能，定义的Link</p>
-<p>最终会被渲染成一个a标签。Link使用to这个属性来指明目标组件的路径，可以直接使用一个字符串，也可以传入</p>
-<p>一个对象</p>
+<h4 id="Link组件"><a href="#Link组件" class="headerlink" title="Link组件"></a><a href="https://malun666.github.io/aicoder_vip_doc/#/pages/Vip3_react_router?id=link组件" target="_blank" rel="noopener">Link组件</a></h4><p>Link就像是一个个的路牌，为我们指明组件的位置。Link使用声明式的方式为应用程序提供导航功能，定义的Link最终会被渲染成一个a标签。Link使用to这个属性来指明目标件的路径，可以直接使用一个字符串，也可以传入一个对象</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Link &#125; from &#39;react-router-dom&#39;</span><br><span class="line">&#x2F;&#x2F; 字符串参数</span><br><span class="line">&lt;Link to&#x3D;&quot;&#x2F;query&quot;&gt;查询&lt;&#x2F;Link&gt;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 对象参数</span><br><span class="line">&lt;Link to&#x3D;&#123;&#123;</span><br><span class="line">  pathname: &#39;&#x2F;query&#39;,</span><br><span class="line">  search: &#39;?key&#x3D;name&#39;,</span><br><span class="line">  hash: &#39;#hash&#39;,</span><br><span class="line">  state: &#123; fromDashboard: true &#125;</span><br><span class="line">&#125;&#125;&gt;查询&lt;&#x2F;Link&gt;</span><br></pre></td></tr></table></figure>
 
 <p><a href="https://malun666.github.io/aicoder_vip_doc/#/pages/Vip3_react_router?id=属性：-to" target="_blank" rel="noopener">属性： to</a></p>
