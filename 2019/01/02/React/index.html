@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>React - Yang博客</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="1、什么是虚拟DOM虚拟DOM是真实DOM在内存中的表示
+2、函数组件与类组件区别函数组件：没有生命周期、this、state
+类组件：有生命周期、this、state
+函数组件的性能比类组件的性能,"> 
+    <meta name="author" content="Advanced_W"> 
+    <link rel="alternative" href="atom.xml" title="Yang博客" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.ico"> 
+    
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">Yang博客</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://yoursite.com"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">React</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">React</h1>
+        <div class="stuff">
+            <span>一月 02, 2019</span>
+            
+
+        </div>
+        <div class="content markdown">
+            <h2 id="1、什么是虚拟DOM"><a href="#1、什么是虚拟DOM" class="headerlink" title="1、什么是虚拟DOM"></a>1、什么是虚拟DOM</h2><p>虚拟DOM是真实DOM在内存中的表示</p>
+<h2 id="2、函数组件与类组件区别"><a href="#2、函数组件与类组件区别" class="headerlink" title="2、函数组件与类组件区别"></a>2、函数组件与类组件区别</h2><p>函数组件：没有生命周期、this、state</p>
+<p>类组件：有生命周期、this、state</p>
+<p>函数组件的性能比类组件的性能要高，因为类组件使用的时候要实例化，而函数组件直接执行函数取返回结果即可。为了提高性能，尽量使用函数组件。</p>
+<h2 id="3、props与state的区别"><a href="#3、props与state的区别" class="headerlink" title="3、props与state的区别"></a>3、props与state的区别</h2><p><code>props</code>与<code>state</code>都是普通的js对象，都包含影响渲染输出的信息，但是在组件方面的功能是不同的</p>
+<p><code>state</code>是自己管理数据，控制自己状态，可变</p>
+<p><code>props</code>书外部传入数据参数，不可变</p>
+<p>有<code>state</code>的叫做有状态组件</p>
+<p>多用 <code>props</code>，少用 <code>state</code>，也就是多写无状态组件</p>
+<h2 id="4、什么是高阶组件"><a href="#4、什么是高阶组件" class="headerlink" title="4、什么是高阶组件"></a>4、什么是高阶组件</h2><p>高阶组件（HOC）接受一个组件并且返回一个新组件的函数，也叫纯组件</p>
+<p>HOC用例：</p>
+<ul>
+<li>代码重用、逻辑、和引导抽象</li>
+<li>渲染劫持</li>
+<li>state抽象和操作</li>
+<li>props处理</li>
+</ul>
+<h2 id="5、什么是JSX"><a href="#5、什么是JSX" class="headerlink" title="5、什么是JSX"></a>5、什么是JSX</h2><p>JSX是将原始HTML模板嵌入到JS代码中。JSX代码本身不能被浏览器解析，要通过<code>Babel</code>和<code>webpack</code>等工具转换为传统JS</p>
+<h2 id="6、react生命周期"><a href="#6、react生命周期" class="headerlink" title="6、react生命周期"></a>6、react生命周期</h2><h4 id="挂载"><a href="#挂载" class="headerlink" title="挂载"></a>挂载</h4><p>当组件实例被创建并插入 DOM 中时，其生命周期调用顺序如下：</p>
+<ul>
+<li><a href="https://react.docschina.org/docs/react-component.html#constructor" target="_blank" rel="noopener"><strong>constructor()</strong></a></li>
+<li><a href="https://react.docschina.org/docs/react-component.html#static-getderivedstatefromprops" target="_blank" rel="noopener"><strong>static getDerivedStateFromProps()</strong></a></li>
+<li><a href="https://react.docschina.org/docs/react-component.html#render" target="_blank" rel="noopener"><strong>render()</strong></a></li>
+<li><a href="https://react.docschina.org/docs/react-component.html#componentdidmount" target="_blank" rel="noopener"><strong>componentDidMount()</strong></a> </li>
+</ul>
+<h4 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h4><p>当组件的 props 或 state 发生变化时会触发更新。组件更新的生命周期调用顺序如下：</p>
+<ul>
+<li><a href="https://react.docschina.org/docs/react-component.html#static-getderivedstatefromprops" target="_blank" rel="noopener"><strong>static getDerivedStateFromProps()</strong></a></li>
+<li><a href="https://react.docschina.org/docs/react-component.html#shouldcomponentupdate" target="_blank" rel="noopener"><strong>shouldComponentUpdate()</strong></a></li>
+<li><a href="https://react.docschina.org/docs/react-component.html#render" target="_blank" rel="noopener"><strong>render()</strong></a></li>
+<li><a href="https://react.docschina.org/docs/react-component.html#getsnapshotbeforeupdate" target="_blank" rel="noopener"><strong>getSnapshotBeforeUpdate()</strong></a></li>
+<li><a href="https://react.docschina.org/docs/react-component.html#componentdidupdate" target="_blank" rel="noopener"><strong>componentDidUpdate()</strong></a></li>
+</ul>
+<h4 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h4><p>当组件从 DOM 中移除时会调用如下方法：</p>
+<ul>
+<li><a href="https://react.docschina.org/docs/react-component.html#componentwillunmount" target="_blank" rel="noopener"><strong>componentWillUnmount()</strong></a></li>
+</ul>
+<h4 id="错误处理"><a href="#错误处理" class="headerlink" title="错误处理"></a>错误处理</h4><p>当渲染过程，生命周期，或子组件的构造函数中抛出错误时，会调用如下方法：</p>
+<ul>
+<li><a href="https://react.docschina.org/docs/react-component.html#static-getderivedstatefromerror" target="_blank" rel="noopener"><strong>static getDerivedStateFromError()</strong></a></li>
+<li><a href="https://react.docschina.org/docs/react-component.html#componentdidcatch" target="_blank" rel="noopener"><strong>componentDidCatch()</strong></a></li>
+</ul>
+<h2 id="7、Hooks"><a href="#7、Hooks" class="headerlink" title="7、Hooks"></a>7、Hooks</h2><p>Hooks 通常支持提取和重用跨多个组件通用的有状态逻辑，而无需承担高阶组件或渲染 <code>props</code> 的负担。<code>Hooks</code> 可以轻松地操作函数组件的状态。</p>
+<p>Hooks 在类中不起作用，通过使用它们，咱们可以完全避免使用生命周期方法。</p>
+<h2 id="8、Virtual-DOM工作原理"><a href="#8、Virtual-DOM工作原理" class="headerlink" title="8、Virtual DOM工作原理"></a>8、Virtual DOM工作原理</h2><p>Virtual DOM 是一个轻量级的 JavaScript 对象，它最初只是 real DOM 的副本。</p>
+<ul>
+<li>每当底层的数据发生改变时，将Virtual DOM 重新渲染</li>
+<li>计算之前DOM与新的DOM之间差异</li>
+<li>完成计算后，将只有实际更改的内容更新 real DOM </li>
+</ul>
+<h2 id="9、什么是Redux"><a href="#9、什么是Redux" class="headerlink" title="9、什么是Redux"></a>9、什么是Redux</h2><p>它是 JavaScript 程序的可预测状态容器，用于整个应用的状态管理。使用 Redux 开发的应用易于测试，可以在不同环境中运行，并显示一致的行为。</p>
+<h4 id="三个原则"><a href="#三个原则" class="headerlink" title="三个原则"></a>三个原则</h4><ul>
+<li>​    <strong>单一数据来源</strong></li>
+<li>​    <strong>状态是只读的</strong></li>
+<li>​    <strong>使用纯函数进行修改</strong></li>
+</ul>
+<h4 id="四大组件"><a href="#四大组件" class="headerlink" title="四大组件"></a>四大组件</h4><p><strong>store：用来存储数据</strong><br><strong>reducer：真正的来管理数据</strong><br><strong>actionCreators：创建action，交由reducer处理</strong><br><strong>view： 用来使用数据，在这里，一般用react组件来充当</strong></p>
+<p><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1587375274551&di=149da446fe0eda78e9d9bc87af2792e5&imgtype=0&src=http%3A%2F%2Fimg3.mukewang.com%2F5b7a7e8f0001161205000261.jpg" alt=""></p>
+<p>1.store通过reducer创建了初始状态<br>2.view通过store.getState()获取到了store中保存的state挂载在了自己的状态上<br>3.用户产生了操作，调用了actions 的方法<br>4.actions的方法被调用，创建了带有标示性信息的action<br>5.actions内部通过调用store.dispatch方法将标志性的action发送到了reducer中<br>6.reducer接收到action并根据标识信息判断之后返回了新的state<br>7.store的state被reducer更改为新state的时候，store.subscribe方法里的回调函数会执行，此时就可以通知view去重新获取state</p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title='0' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                        
+                            <li title='1' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+		data-enable='false'
+        data-ae='false'
+        data-ci=''
+        data-cs=''
+        data-r=''
+        data-o=''
+        data-a=''
+        data-d='false'
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>
