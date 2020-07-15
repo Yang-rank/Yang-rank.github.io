@@ -37,7 +37,7 @@
     <span id="config-title" style="display:none">Yang博客</span>
     <div id="loader"></div>
     <div id="single">
-    <div id="top" style="display: block;">
+  <div id="top" style="display: block;">
     <div class="bar" style="width: 0;"></div>
     <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://yoursite.com"></a>
     <div title="播放/暂停" class="iconfont icon-play"></div>
@@ -53,17 +53,17 @@
     <div class="scrollbar"></div>
 </div>
 
-    <div class="section">
-        <div class="article">
-    <div class='main'>
-        <h1 class="title">React</h1>
-        <div class="stuff">
-            <span>一月 02, 2019</span>
-            
+  <div class="section">
+    <div class="article">
+  <div class='main'>
+    <h1 class="title">React</h1>
+    <div class="stuff">
+      <span>一月 02, 2019</span>
+      
 
-        </div>
-        <div class="content markdown">
-            <h2 id="1、什么是虚拟DOM"><a href="#1、什么是虚拟DOM" class="headerlink" title="1、什么是虚拟DOM"></a>1、什么是虚拟DOM</h2><p>虚拟DOM是真实DOM在内存中的表示</p>
+    </div>
+    <div class="content markdown">
+      <h2 id="1、什么是虚拟DOM"><a href="#1、什么是虚拟DOM" class="headerlink" title="1、什么是虚拟DOM"></a>1、什么是虚拟DOM</h2><p>虚拟DOM是真实DOM在内存中的表示</p>
 <h2 id="2、函数组件与类组件区别"><a href="#2、函数组件与类组件区别" class="headerlink" title="2、函数组件与类组件区别"></a>2、函数组件与类组件区别</h2><p>函数组件：没有生命周期、this、state</p>
 <p>类组件：有生命周期、this、state</p>
 <p>函数组件的性能比类组件的性能要高，因为类组件使用的时候要实例化，而函数组件直接执行函数取返回结果即可。为了提高性能，尽量使用函数组件。</p>
@@ -123,23 +123,24 @@
 <p><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1587375274551&di=149da446fe0eda78e9d9bc87af2792e5&imgtype=0&src=http%3A%2F%2Fimg3.mukewang.com%2F5b7a7e8f0001161205000261.jpg" alt=""></p>
 <p>1.store通过reducer创建了初始状态<br>2.view通过store.getState()获取到了store中保存的state挂载在了自己的状态上<br>3.用户产生了操作，调用了actions 的方法<br>4.actions的方法被调用，创建了带有标示性信息的action<br>5.actions内部通过调用store.dispatch方法将标志性的action发送到了reducer中<br>6.reducer接收到action并根据标识信息判断之后返回了新的state<br>7.store的state被reducer更改为新state的时候，store.subscribe方法里的回调函数会执行，此时就可以通知view去重新获取state</p>
 
-            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
-            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
-                <source type="audio/mpeg" src="">
-            </audio>
-            
-                <ul id="audio-list" style="display:none">
+      <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+      <audio id="audio" loop="1" preload="auto" controls="controls"
+        data-autoplay="false">
+        <source type="audio/mpeg" src="">
+      </audio>
+      
+      <ul id="audio-list" style="display:none">
+        
+        
+        <li title='0' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+        
                     
-                        
-                            <li title='0' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
-                        
+        
+        <li title='1' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+        
                     
-                        
-                            <li title='1' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
-                        
-                    
-                </ul>
-            
+      </ul>
+      
         </div>
         
     <div id='gitalk-container' class="comment link"
@@ -155,11 +156,10 @@
 
 
     </div>
+
     
 </div>
-
-
-    </div>
+  </div>
 </div>
 </body>
 

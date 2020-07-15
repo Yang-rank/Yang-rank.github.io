@@ -35,7 +35,7 @@
     <span id="config-title" style="display:none">Yang博客</span>
     <div id="loader"></div>
     <div id="single">
-    <div id="top" style="display: block;">
+  <div id="top" style="display: block;">
     <div class="bar" style="width: 0;"></div>
     <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://yoursite.com"></a>
     <div title="播放/暂停" class="iconfont icon-play"></div>
@@ -51,17 +51,17 @@
     <div class="scrollbar"></div>
 </div>
 
-    <div class="section">
-        <div class="article">
-    <div class='main'>
-        <h1 class="title">Vue</h1>
-        <div class="stuff">
-            <span>三月 18, 2019</span>
-            
+  <div class="section">
+    <div class="article">
+  <div class='main'>
+    <h1 class="title">Vue</h1>
+    <div class="stuff">
+      <span>三月 18, 2019</span>
+      
 
-        </div>
-        <div class="content markdown">
-            <h2 id="1、SPA单页面"><a href="#1、SPA单页面" class="headerlink" title="1、SPA单页面"></a>1、SPA单页面</h2><p>SPA（single-page application ）不会因为用户操作而进行页面的重新加载或者跳转，而是利用路由机制实现HTML内容的变换，UI与用户的交互，避免页面的重新加载</p>
+    </div>
+    <div class="content markdown">
+      <h2 id="1、SPA单页面"><a href="#1、SPA单页面" class="headerlink" title="1、SPA单页面"></a>1、SPA单页面</h2><p>SPA（single-page application ）不会因为用户操作而进行页面的重新加载或者跳转，而是利用路由机制实现HTML内容的变换，UI与用户的交互，避免页面的重新加载</p>
 <p><strong>优点</strong>：</p>
 <ul>
 <li>用户体验好，内容改变不需要夹杂整个页面，避免不必要的跳转和重复渲染</li>
@@ -109,8 +109,7 @@
 <li>改变 store 中的状态的唯一途径就是显式地提交  (commit) mutation。这样使得我们可以方便地跟踪每一个状态的变化。</li>
 </ul>
 <h2 id="6、Vue实现数据双向绑定"><a href="#6、Vue实现数据双向绑定" class="headerlink" title="6、Vue实现数据双向绑定"></a>6、Vue实现数据双向绑定</h2><p>vue数据双向绑定主要是指：数据变化更新视图，视图变化更新数据</p>
-<p><img src="%E6%83%B3%C2%B7" alt="1.png"></p>
-<p>主要通过4个步骤实现数据双向绑定：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2019/8/19/16ca75871f2e5f80?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="1.png"><br>主要通过4个步骤实现数据双向绑定：</p>
 <p>（1）实现一个监听器Observer：对数据对象进行遍历，包括紫属性对象的属性，利用Object.defineProperty()对属性都加上setter和getter</p>
 <p>（2）实现一个解析器compile：解析Vue模板指令，将模板中的变量都替换成数据，然后初始化渲染页面视图，并将每个指令对应的节点绑定更新函数，添加监听数据的订阅者，一旦数据有变动，收到通知，调用更新函数进行数据更新</p>
 <p>（3）实现一个订阅者 Watcher：Watcher 订阅者是 Observer 和 Compile 之间通信的桥梁 ，主要的任务是订阅 Observer 中的属性值变化的消息，当收到属性值变化的消息时，触发解析器 Compile 中对应的更新函数</p>
@@ -132,23 +131,24 @@
 <li>Module：允许将单一的 Store 拆分为多个 store 且同时保存在单一的状态树中。</li>
 </ul>
 
-            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
-            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
-                <source type="audio/mpeg" src="">
-            </audio>
-            
-                <ul id="audio-list" style="display:none">
+      <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+      <audio id="audio" loop="1" preload="auto" controls="controls"
+        data-autoplay="false">
+        <source type="audio/mpeg" src="">
+      </audio>
+      
+      <ul id="audio-list" style="display:none">
+        
+        
+        <li title='0' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+        
                     
-                        
-                            <li title='0' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
-                        
+        
+        <li title='1' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+        
                     
-                        
-                            <li title='1' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
-                        
-                    
-                </ul>
-            
+      </ul>
+      
         </div>
         
     <div id='gitalk-container' class="comment link"
@@ -164,11 +164,10 @@
 
 
     </div>
+
     
 </div>
-
-
-    </div>
+  </div>
 </div>
 </body>
 
